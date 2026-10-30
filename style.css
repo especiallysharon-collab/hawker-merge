@@ -54,3 +54,11 @@ html,body{background:#efe6a7}.shell{max-width:1320px}.mast,footer{font-size:12px
 @media(max-width:700px){.layout{grid-template-columns:minmax(0,1fr)} }
 
 .textbutton{color:#171711;-webkit-text-fill-color:#171711}
+/* A fixed-height feedback strip above the board keeps the play field clear. */
+.play .drop-note{position:static;order:initial;align-self:center;box-sizing:border-box;width:min(100%,620px);max-width:620px;height:30px;min-height:30px;margin:0 0 4px;padding:5px 9px;display:flex;align-items:center;gap:9px;overflow:hidden;white-space:nowrap;transform:none;opacity:0;background:#181812;color:#fffbe8;pointer-events:none}
+.play .drop-note.visible{opacity:1;transform:none}
+.play .drop-note .drop-kicker{color:#f0dc52;font-size:10px;font-weight:800;letter-spacing:.06em;flex:none}
+.play .drop-note strong,.play .drop-note small{display:none}
+.play .drop-note #dropValue{margin:0;color:#fffbe8;font-size:11px;line-height:1.2;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+@media(max-width:700px){.play{grid-template-rows:auto 34px minmax(0,1fr)}.play .drop-note{width:100%;height:30px;min-height:30px;margin:0 0 4px;padding:4px 7px;gap:7px}.play .drop-note .drop-kicker{font-size:9px}.play .drop-note #dropValue{font-size:10px}}
+@media(max-width:360px){.play .drop-note .drop-kicker{font-size:8px}.play .drop-note #dropValue{font-size:9px}}
