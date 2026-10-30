@@ -52,3 +52,5 @@ html,body{background:#efe6a7}.shell{max-width:1320px}.mast,footer{font-size:12px
 }
 @media(max-height:480px){.shell{height:auto;min-height:100dvh;overflow:visible}.layout{min-height:360px}.board{height:300px;width:210px;max-height:none}}
 @media(max-width:700px){.layout{grid-template-columns:minmax(0,1fr)} }
+
+.textbutton{color:#171711;-webkit-text-fill-color:#171711}
