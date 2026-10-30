@@ -36,3 +36,19 @@ html,body{background:#efe6a7}.shell{max-width:1320px}.mast,footer{font-size:12px
  .evolution-panel[open]{right:8px;bottom:max(8px,env(safe-area-inset-bottom));width:calc(100vw - 16px);max-height:70dvh}.evolution-panel[open] .evolution #chart{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;overflow:visible}.evolution-panel[open] .dish{display:block}.evolution-panel[open] .dish img{width:54px}.evolution-panel[open] .dish small{min-height:0}.evolution-panel[open] .notes{font-size:11px;line-height:1.4}footer{display:none}
 }
 @media(max-height:480px){.shell{height:auto;min-height:100dvh;overflow:visible}.layout{min-height:320px}.board{max-height:none;width:min(100%,280px)}.play-top{width:min(100%,280px)}}
+/* Responsive board: the board lives in its own bounded grid row. */
+.board-area{min-height:0;min-width:0;display:flex;align-items:center;justify-content:center;width:100%}
+@media(min-width:701px){.board-area{flex:1}.board{height:min(100%,calc((100vw - 400px)*.85));width:auto;max-width:100%;max-height:100%;aspect-ratio:7/10}.play-top{max-width:620px}.under{flex:none}}
+@media(max-width:700px){
+ .shell{height:100dvh;padding:8px 12px max(8px,env(safe-area-inset-bottom));overflow:hidden}
+ .mobile-head{min-height:62px}.layout{display:grid;grid-template-rows:minmax(0,1fr) auto;gap:0;flex:1;min-height:0}
+ .play{display:grid;grid-template-rows:auto minmax(0,1fr);min-height:0;min-width:0;align-items:stretch}
+ .play-top{width:100%;max-width:none;margin:0 0 4px;font-size:9px;line-height:14px}
+ .board-area{height:100%;width:100%;overflow:hidden}
+ .board{height:min(100%,calc(142.857vw - 34.286px));width:auto;max-width:100%;max-height:100%;aspect-ratio:7/10;flex:none;margin:0}
+ .under{display:none}
+ aside{min-height:0}.game-scores{padding:5px 0;line-height:19px}.evolution-panel>summary{min-height:36px}.actions button{min-height:38px}
+ .drop-note{top:8px;right:8px;max-width:165px;padding:6px 8px;opacity:0;background:#171711}.drop-note .drop-kicker{font-size:10px}.drop-note strong,.drop-note small{display:none}.drop-note #dropValue{font-size:11px;line-height:1.25;margin-top:3px}
+}
+@media(max-height:480px){.shell{height:auto;min-height:100dvh;overflow:visible}.layout{min-height:360px}.board{height:300px;width:210px;max-height:none}}
+@media(max-width:700px){.layout{grid-template-columns:minmax(0,1fr)} }
